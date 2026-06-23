@@ -6,9 +6,9 @@
 	<title>Portfolio Campus Numérique</title>
 	<meta name="description" content="Liste de service de developpement web et de porfolio de developpeur web" />
 	<meta name="keywords" content="dev-web creation site internet " />
-	<meta name="author" content="Campus Numérique" />
-	<meta name="robots" content="index, follow" />
-	<meta property="og:type" content="website" />
+	<meta name="author" content="Campus Numérique"/>
+	<meta name="robots" content="index, follow"/>
+	<meta property="og:type" content="website"/>
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="Porfolio Campus Numérique" />
 	<meta name="twitter:description" content="Voici notre entreprise de dev web affilié au campus numérique" />
@@ -23,25 +23,24 @@
 	<link rel="icon" type="image/png" sizes="512x512" href="/favicon/android-chrome-512x512.png" />
 	<link rel="manifest" href="/favicon/site.webmanifest" />
 	<link rel="stylesheet" href="assets/style.css">
+	<link rel="stylesheet" href="assets/Bootstrap/bootstrap.min.css">
 
-	
 	<script type="module" src="assets/Bootstrap/bootstrap.min.js"></script>
+
 </head>
 <body data-bs-theme="dark">
 	<nav class="navbar navbar-dark bg-dark topbar"> <!-- Barre de navigation avec burger titre etc...-->
-		<div class="container">
-			<a href="index.html"><h1>Entreprise Fictive</h1></a>
-			<button class="burger">
-				<span class="bar"></span>
-				<span class="bar"></span>
-				<span class="bar"></span>
-			</button>
-			<div class="nav-links">
-				<a href="">Temp1</a>
-				<a href="">Temp2</a>
-				<a href="">Temp3</a>
+				<a href="index.html"><h1>Entreprise Fictive</h1></a>
+			<div class="burgerdiv">
+				<button class="burger">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</button>
+				<div class="nav-links">
+					<a href="rgpd.html">RGPD</a>
+				</div>
 			</div>
-		</div>
 	</nav>
 
 	<header role="presentation" class="intro container"> <!-- Banner contenant une description et une photo pour chaque membres de l'équipe, accès à leurs portfolio individuels-->
@@ -52,25 +51,25 @@
 	</header>
 	<section class="container">
 		<!-- Equipe avec liens -->
-		<div class ="member">
-			<div class = "member-l">
+		<div class="member">
+			<div class="member-l">
 				<h2>ChrOn0os</h2>
-				<a href="https://github.com/ChrOn0os/"><img src="https://avatars.githubusercontent.com/u/44614000?v=4" alt="Avatar github de ChrOn0os" ></a>
+				<a href="https://github.com/ChrOn0os/"><img src="https://avatars.githubusercontent.com/u/44614000?v=4" alt="Avatar github de ChrOn0os" id="photo-profil"></a>
 				<p>Découvrez ChrOn0os, notre expert HTML</p>
 			</div>
-			<div class = "member-r">
+			<div class="member-r">
 				<h2>Stanwix85</h2>
-				<a href="https://github.com/Stanwix85"><img src="https://avatars.githubusercontent.com/u/116114531?v=4" alt="Avatar github de Stanwix85"></a>
+				<a href="https://github.com/Stanwix85"><img src="https://avatars.githubusercontent.com/u/116114531?v=4" alt="Avatar github de Stanwix85" id="photo-profil"></a>
 				<p>Découvrez Stanwix85, notre expert CSS</p>
 			</div>
-			<div class = "member-l">
+			<div class="member-l">
 				<h2>V-Swan</h2>
-				<a href="https://github.com/V-Swan"><img src="https://avatars.githubusercontent.com/u/295772069?v=4" alt="Avatar github de V-Swan"></a>
+				<a href="https://github.com/V-Swan"><img src="https://avatars.githubusercontent.com/u/295772069?v=4" alt="Avatar github de V-Swan" id="photo-profil"></a>
 				<p>Découvrez V-Swan, notre expert JS</p>
 			</div>
-			<div class = "member-r">
+			<div class="member-r">
 				<h2>Erozah</h2>
-				<a href="https://github.com/Erozah"><img src="https://avatars.githubusercontent.com/u/148356160?v=4" alt="Avatar github de Erozah"></a>
+				<a href="https://github.com/Erozah"><img src="https://avatars.githubusercontent.com/u/148356160?v=4" alt="Avatar github de Erozah" id="photo-profil"></a>
 				<p>Découvrez Erozah, notre expert SEO</p>
 			</div>
 		</div>
@@ -104,11 +103,41 @@
 </div>
 		 </div>
 	</section>
-	<section>
-		<!-- Formulaire contact -->
-	</section>
+<section>
+	<div class="contact-container">
+
+    	<form>
+        	<h1>Contactez-nous</h1>
+
+        	<div>
+            	<label for="name">Nom</label>
+            	<input type="text" id="name" placeholder="Votre nom" required>
+        	</div>
+
+        	<div>
+            	<label for="email">Email</label>
+            	<input type="email" id="email" placeholder="Votre email" required>
+        	</div>
+
+        	<div>
+            	<label for="message">Message</label>
+            	<textarea id="message" placeholder="Votre message..." required></textarea>
+        	</div>
+
+        	<button type="submit">Envoyer</button>
+    	</form>
+	</div>
+</section>
 	<footer>
 		<a href="rgpd.html">Politique de confidentialité</a>
 	</footer>	
+
+	<script> // Script pour détecter le click sur le burger
+        const burgerBtn = document.querySelector('.burger');
+        burgerBtn.addEventListener('click', () => {
+        burgerBtn.classList.toggle('open');
+        document.querySelector('.nav-links').classList.toggle('open-nav-links');    
+        });
+    </script>
 </body>
 </html>

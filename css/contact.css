@@ -1,0 +1,137 @@
+/* ===== CONTACT SECTION ===== */
+
+.contact-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #29333d;
+    padding: 20px;
+}
+
+.contact-wrapper {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* ===== FORM ===== */
+
+.contact-form {
+    background: #061d3a;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* TITLE */
+
+.contact-title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+/* GROUP */
+
+.contact-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* LABEL */
+
+.contact-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* INPUTS */
+
+.contact-input,
+.contact-textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* TEXTAREA */
+
+.contact-textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* FOCUS */
+
+.contact-input:focus,
+.contact-textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74,144,226,0.4);
+}
+
+/* BUTTON */
+
+.contact-button {
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #4a90e2;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-button:hover {
+    background: #357ab8;
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 768px) {
+    .contact-form {
+        padding: 30px;
+    }
+
+    .contact-title {
+        font-size: 28px;
+    }
+}
+@media (min-width: 768px) {
+
+    .contact-wrapper {
+        max-width: 700px;
+    }
+
+    .contact-form {
+        padding: 40px;
+        gap: 20px;
+        border-radius: 16px;
+    }
+
+    .contact-title {
+        font-size: 32px;
+    }
+
+    .contact-input,
+    .contact-textarea {
+        padding: 16px;
+        font-size: 17px;
+    }
+
+    .contact-textarea {
+        min-height: 180px;
+    }
+
+    .contact-button {
+        padding: 16px;
+        font-size: 17px;
+    }
+}

@@ -23,10 +23,32 @@
 	<link rel="icon" type="image/png" sizes="512x512" href="/favicon/android-chrome-512x512.png" />
 	<link rel="manifest" href="/favicon/site.webmanifest" />
 	<link rel="stylesheet" href="css/contact.css">
-</head>
-<body>
-	<header>
+	<link rel="stylesheet" href="assets/Bootstrap/bootstrap.min.css">
+	<script type="module" src="assets/Bootstrap/bootstrap.min.js"></script>
 
+</head>
+<body data-bs-theme="dark">
+	<nav class="navbar navbar-dark bg-dark topbar"> <!-- Barre de navigation avec burger titre etc...-->
+		<div class="container">
+			<a href="index.html"><h1>Entreprise Fictive</h1></a>
+			<button class="burger">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+			</button>
+			<div class="nav-links">
+				<a href="">Temp1</a>
+				<a href="">Temp2</a>
+				<a href="">Temp3</a>
+			</div>
+		</div>
+	</nav>
+
+	<header role="presentation" class="intro container"> <!-- Banner contenant une description et une photo pour chaque membres de l'équipe, accès à leurs portfolio individuels-->
+		<div class="entreprise">
+			<p id="description-entreprise">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sollicitudin luctus nulla in pharetra. Sed in maximus mi, ut commodo turpis. Suspendisse ut ante neque. Vivamus luctus consectetur nunc ac mattis.</p>
+			<img src="assets/imgs/entreprise.png" alt="Default Entreprise" id="photo-profil">
+		</div>
 	</header>
 	<section class="container">
 		<!-- Equipe avec liens -->

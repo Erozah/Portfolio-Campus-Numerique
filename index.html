@@ -6,9 +6,9 @@
 	<title>Portfolio Campus Numérique</title>
 	<meta name="description" content="Liste de service de developpement web et de porfolio de developpeur web" />
 	<meta name="keywords" content="dev-web creation site internet " />
-	<meta name="author" content="Campus Numérique" />
-	<meta name="robots" content="index, follow" />
-	<meta property="og:type" content="website" />
+	<meta name="author" content="Campus Numérique"/>
+	<meta name="robots" content="index, follow"/>
+	<meta property="og:type" content="website"/>
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="Porfolio Campus Numérique" />
 	<meta name="twitter:description" content="Voici notre entreprise de dev web affilié au campus numérique" />
@@ -22,26 +22,26 @@
 	<link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-chrome-192x192.png" />
 	<link rel="icon" type="image/png" sizes="512x512" href="/favicon/android-chrome-512x512.png" />
 	<link rel="manifest" href="/favicon/site.webmanifest" />
-	<link rel="stylesheet" href="contact.css">
 	<link rel="stylesheet" href="assets/Bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/style.css">
 	<script type="module" src="assets/Bootstrap/bootstrap.min.js"></script>
 
 </head>
 <body data-bs-theme="dark">
 	<nav class="navbar navbar-dark bg-dark topbar"> <!-- Barre de navigation avec burger titre etc...-->
-		<div class="container">
-			<a href="index.html"><h1>Entreprise Fictive</h1></a>
-			<button class="burger">
-				<span class="bar"></span>
-				<span class="bar"></span>
-				<span class="bar"></span>
-			</button>
-			<div class="nav-links">
-				<a href="">Temp1</a>
-				<a href="">Temp2</a>
-				<a href="">Temp3</a>
+				<a href="index.html"><h1>Entreprise Fictive</h1></a>
+			<div class="burgerdiv">
+				<button class="burger">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</button>
+				<div class="nav-links">
+					<a href="">Temp1</a>
+					<a href="">Temp2</a>
+					<a href="">Temp3</a>
+				</div>
 			</div>
-		</div>
 	</nav>
 
 	<header role="presentation" class="intro container"> <!-- Banner contenant une description et une photo pour chaque membres de l'équipe, accès à leurs portfolio individuels-->
@@ -130,5 +130,13 @@
 	<footer>
 		<a href="rgpd.html">Politique de confidentialité</a>
 	</footer>	
+
+	<script> // Script pour détecter le click sur le burger
+        const burgerBtn = document.querySelector('.burger');
+        burgerBtn.addEventListener('click', () => {
+        burgerBtn.classList.toggle('open');
+        document.querySelector('.nav-links').classList.toggle('open-nav-links');    
+        });
+    </script>
 </body>
 </html>

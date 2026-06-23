@@ -119,3 +119,15 @@ body {
 #description-entreprise {
     padding-left: 1em;
 }
+
+/* card css */
+#cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 3% 10% 3% 10% ;
+    gap: 2%;
+}
+#cards .card img {
+    height: 55%;
+
+}
